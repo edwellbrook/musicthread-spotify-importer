@@ -65,7 +65,7 @@ func main() {
 	for _, uri := range playlistItemURIs {
 		body := "{\"url\": \"" + uri + "\", \"thread\":\"" + *threadKey + "\"}"
 
-		req, _ := http.NewRequest("POST", "http://localhost:8080/api/v0/add-link", bytes.NewBuffer([]byte(body)))
+		req, _ := http.NewRequest("POST", "https://musicthread.app/api/v0/add-link", bytes.NewBuffer([]byte(body)))
 		req.Header.Add("Authorization", "Bearer "+*token)
 		req.Header.Add("Content-Type", "application/json; charset=utf-8")
 
